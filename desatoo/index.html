@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/chobox.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            //            nav
+            $('#content_index').show();
+            $('#content_items').hide();
+            $('#content_cake').hide();
+            $('#content_chocolate').hide();
+            $('#content_icecream').hide();
+            $('#content_box').hide();
+            $('#content_cart').hide();
+
+            $('#logo').click(function() {
+                $('#content_index').show();
+                $('#content_items').hide();
+                $('#content_cake').hide();
+                $('#content_items').hide();
+                $('#content_chocolate').hide();
+                $('#content_icecream').hide();
+                $('#content_box').hide();
+                $('#content_cart').hide();
+            });
+            $('.dropdown .btn').click(function() {
+                $('#content_index').hide();
+                $('#content_items').hide();
+                $('#content_cake').hide();
+                $('#content_items').show();
+                $('#content_chocolate').hide();
+                $('#content_icecream').hide();
+                $('#content_box').hide();
+                $('#content_cart').hide();
+            });
+            $('#nav_cake').click(function() {
+                $('#content_index').hide();
+                $('#content_items').hide();
+                $('#content_cake').show();
+                $('#content_chocolate').hide();
+                $('#content_icecream').hide();
+                $('#content_box').hide();
+                $('#content_cart').hide();
+            });
+            $('#nav_chocolate').click(function() {
+                $('#content_index').hide();
+                $('#content_items').hide();
+                $('#content_cake').hide();
+                $('#content_chocolate').show();
+                $('#content_icecream').hide();
+                $('#content_box').hide();
+                $('#content_cart').hide();
+            });
+            $('#nav_icecream').click(function() {
+                $('#content_index').hide();
+                $('#content_items').hide();
+                $('#content_cake').hide();
+                $('#content_chocolate').hide();
+                $('#content_icecream').show();
+                $('#content_box').hide();
+                $('#content_cart').hide();
+            });
+            $('#nav_box').click(function() {
+                $('#content_index').hide();
+                $('#content_items').hide();
+                $('#content_cake').hide();
+                $('#content_chocolate').hide();
+                $('#content_icecream').hide();
+                $('#content_box').show();
+                $('#content_cart').hide();
+            });
+            $('#nav_cart').click(function() {
+                $('#content_index').hide();
+                $('#content_items').hide();
+                $('#content_cake').hide();
+                $('#content_chocolate').hide();
+                $('#content_icecream').hide();
+                $('#content_box').hide();
+                $('#content_cart').show();
+            });
+            $('#chocolate').click(function() {
+                $('#content_index').hide();
+                $('#content_items').hide();
+                $('#content_cake').hide();
+                $('#content_chocolate').show();
+                $('#content_icecream').hide();
+                $('#content_box').hide();
+                $('#content_cart').hide();
+            });
+            $('#icecream').click(function() {
+                $('#content_index').hide();
+                $('#content_items').hide();
+                $('#content_cake').hide();
+                $('#content_chocolate').hide();
+                $('#content_icecream').show();
+                $('#content_box').hide();
+                $('#content_cart').hide();
+            });
+            $('#cake').click(function() {
+                $('#content_index').hide();
+                $('#content_items').hide();
+                $('#content_cake').show();
+                $('#content_chocolate').hide();
+                $('#content_icecream').hide();
+                $('#content_box').hide();
+                $('#content_cart').hide();
+            });
+            $('#giftbox').click(function() {
+                $('#content_index').hide();
+                $('#content_items').hide();
+                $('#content_cake').hide();
+                $('#content_chocolate').hide();
+                $('#content_icecream').hide();
+                $('#content_box').show();
+                $('#content_cart').hide();
+            });
+            //            items
+            $('.dessert_item').find('img').hover(function() {
+                // Get size for selecte image 
+                $this = $(this);
+                originalWidth = $this.width();
+                originalHeight = $this.height();
+                scale = 20;
+                speed = 250;
+                newWidth = originalWidth + originalWidth / 100 * scale;
+                newHeight = originalHeight + originalHeight / 100 * scale;
+                $this.stop().animate({ // Enlarge image on MouseOver 
+                    width: newWidth,
+                    height: newHeight
+                }, speed);
+            }, function() { // Shrink image on MouseOut 
+                $this.stop().animate({
+                    width: originalWidth,
+                    height: originalHeight
+                }, speed);
+            }); // end hover   
+            //            content_cake and content_icecream
+            $('#box2 a').click(function(e) {
+                e.preventDefault();
+                var imgPath = $(this).attr('href');
+                var $newImage = $(`<img src="${imgPath}"/>`);
+                var $oldImage = $('#box1 img');
+                $newImage.hide();
+                $('#box1').prepend($newImage);
+                $newImage.hide;
+                $('#box1').prepend($newImage);
+                $newImage.fadeIn(50);
+                $oldImage.fadeOut(50, function() {
+                    $(this).remove();
+                });
+            });
+            $('#box4 a').click(function(e) {
+                e.preventDefault();
+                var imgPath = $(this).attr('href');
+                var $newImage = $(`<img src="${imgPath}"/>`);
+                var $oldImage = $('#box3 img');
+                $newImage.hide();
+                $('#box3').prepend($newImage);
+                $newImage.hide;
+                $('#box3').prepend($newImage);
+                $newImage.fadeIn(50);
+                $oldImage.fadeOut(50, function() {
+                    $(this).remove();
+                });
+            });
+
+            //            content_chocolate
+            $('#p1').click(function() {
+                $('#item1').show();
+                $('#item2').hide();
+                $('#item3').hide();
+                $('#item4').hide();
+                $('#item5').hide();
+                $('#item0').hide();
+            });
+
+            $('#p2').click(function() {
+                $('#item2').show();
+                $('#item1').hide();
+                $('#item3').hide();
+                $('#item4').hide();
+                $('#item5').hide();
+                $('#item0').hide();
+            });
+
+
+            $('#p3').click(function() {
+                $('#item3').show();
+                $('#item2').hide();
+                $('#item1').hide();
+                $('#item4').hide();
+                $('#item5').hide();
+                $('#item0').hide();
+            });
+
+            $('#p4').click(function() {
+                $('#item4').show();
+                $('#item2').hide();
+                $('#item3').hide();
+                $('#item1').hide();
+                $('#item5').hide();
+                $('#item0').hide();
+            });
+
+            $('#p5').click(function() {
+                $('#item5').show();
+                $('#item2').hide();
+                $('#item3').hide();
+                $('#item4').hide();
+                $('#item1').hide();
+                $('#item0').hide();
+            });
+
+
+
+            //            content_box
+            $('#gallery a').click(function(e) {
+                e.preventDefault();
+                var imagePath = $(this).attr('href');
+                var $newImage = $(`<img src="${imagePath}"/>`);
+                var $oldImage = $('#photo img');
+                $newImage.hide();
+                $('#photo').prepend($newImage);
+                $newImage.fadeIn(500);
+                $oldImage.fadeOut(500, function() {
+                    $(this).remove();
+                });
+            });
+
+
+        }); // end ready
+
+    </script>
+</head>
+
+<body>
+    <div id="container">
+
+        <!--        ------------------------header-------------------------->
+        <header>
+            <div id="header">
+                <div id="logo">
+                    <a href="index.html"><img src="img/logo.JPG"></a>
+                </div>
+                <div id="name">DESATOO</div>
+            </div>
+        </header>
+
+        <!--        ------------------------nav-------------------------->
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <div class="dropdown show" id="myMenuBtn">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">商品</a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" id="nav_cake" href="#">蛋糕</a>
+                            <a class="dropdown-item" id="nav_chocolate" href="#">巧克力</a>
+                            <a class="dropdown-item" id="nav_icecream" href="#">冰淇淋</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav_box" href="#">禮物盒</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav_cart" href="#">購物車</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--        ------------------------all_content-------------------------->
+        <div id="all_content">
+
+            <!--        ------------------------index-------------------------->
+            <div id="content_index">
+                <div id="popular_items">
+                    <h1>熱門商品</h1>
+                    <div id="popular_items_img">
+                        <img class="popular_items_img" src="img/cake1.jpg" height="200" alt="">
+                        <img class="popular_items_img" src="img/cake2.jpg" height="200" alt="">
+                        <img class="popular_items_img" src="img/cake3.jpg" height="200" alt="">
+                        <hr>
+                    </div>
+                </div>
+                <div id="about_us">
+                    <h1>About us</h1>
+                    <p>
+                        我們是DESATOO！<br>
+                        曾遍嚐百味，才在最初的原點找到人生的甜<br>
+                        曾攀上世界巔峰，才發現最大的驕傲來自於您品後淺淺的微笑
+                    </p>
+                </div>
+            </div>
+
+            <!--        ------------------------items-------------------------->
+            <div id="content_items">
+                <div id="banner">
+                    <p>商品種類</p>
+                </div>
+                <div id="container_items">
+                    <div class="dessert_item">
+                        <div id="giftbox">
+                            <img class="dessert_img" src="./img/1.jpg" />
+                            <div class="dessert_text">禮盒</div>
+                        </div>
+                    </div>
+
+                    <div class="dessert_item">
+                        <div id="chocolate">
+                            <img class="dessert_img" src="./img/chocolate.jpg" />
+                            <div class="dessert_text">品名:巧克力<br>介紹:<br>熱量: 545.6卡/100克</div>
+                            <div class="dessert_price">$40</div>
+                        </div>
+                    </div>
+                    <div class="dessert_item">
+                        <div id="icecream">
+                            <a href="./icecream.html"></a>
+                            <img class="dessert_img" src="img/icecream.jpg" />
+                            <div class="dessert_text">品名:冰淇淋<br>介紹:<br>過敏原提醒:牛奶<br>熱量: 207卡/100克</div>
+                            <div class="dessert_price">$50</div>
+                        </div>
+                    </div>
+                    <div class="dessert_item">
+                        <div id="cake">
+                            <img class="dessert_img" src="./img/cheesecake.jpg" />
+                            <div class="dessert_text">品名:蛋糕<br>介紹:<br>熱量:291.1卡/100克 </div>
+                            <div class="dessert_price">$50</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--        ------------------------cake-------------------------->
+            <div id="content_cake">
+                <div id="banner">
+                    <div id="item_num">0</div>
+                    <img src="./img/shopping-cart.png" alt="">
+                    <p>蛋糕</p>
+                </div>
+                <div class="intorduce">
+                    <p>以鮮奶油或奶油及蛋、麵粉等為原料<br>
+                        <br>過敏原提醒:牛奶<br>
+                        <br>熱量: 207卡/100克<br>
+                        <br>口味:起司<br>
+                        <br>價錢:20$/份<br>
+                    </p>
+                    <div id="cart">加入購物車</div>
+                </div>
+                <div class="container_cake">
+                    <div class="picture">
+
+                        <div id="box2">
+                            <a href="./img/cake1.jpeg"><img src="./img/cake1.jpeg" alt=""></a>
+                            <a href="./img/cake2.jpeg"><img src="./img/cake2.jpeg" alt=""></a>
+                            <a href="./img/cheesecake.jpg"><img src="./img/cheesecake.jpg" alt=""></a>
+                        </div>
+                        <div id="box1">
+                            <img src="./img/cake1.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="cart">
+
+                    </div>
+                </div>
+            </div>
+
+            <!--        ------------------------chocolate-------------------------->
+            <div id="content_chocolate">
+                <div id="nothing"> </div>
+
+                <div id="map">
+                    <img src="chocolateImg/map.jfif" id="mapPosition" alt="" height="700px">
+                    <img src="chocolateImg/position-.png" alt="" class="position" id="p1">
+                    <img src="chocolateImg/position-.png" alt="" class="position" id="p2">
+                    <img src="chocolateImg/position-.png" alt="" class="position" id="p3">
+                    <img src="chocolateImg/position-.png" alt="" class="position" id="p4">
+                    <img src="chocolateImg/position-.png" alt="" class="position" id="p5">
+
+                </div>
+
+                <div id="chocolateIntroduction">
+                   <div id="item0">
+                       <h1>請點選地圖圖標</h1>
+                       <h1>選擇巧克力產地</h1>
+                   </div>
+                    <div id="item1">
+                        <h2>Bendicks</h2>
+                        <img src="chocolateImg/bendicks.jpg" alt="" width="450px">
+                        <p>Bendicks是世界著名巧克力，是英國王室指定禦用巧克力品牌之一。Bendicks開辟了一系列的薄荷口胃巧克力，像是薄荷脆（Mint Crisps）、梅費爾薄荷（The Mayfair Mint），維多利亞薄荷（The Victoria Mint），Bendicks則將高純度苦澀可可和冰冷薄荷完善聯合起來，可可的苦感下薄荷精油卻更加吃得甜美。</p>
+                        <h3>產地:英國</h3>
+                        <p>熱量:428卡/100克</p>
+                        <p>$500</p>
+                        <div class="chobtn">加入購物車</div>
+                    </div>
+
+                    <div id="item2">
+                        <h2>Godiva</h2>
+                        <img src="chocolateImg/godiva.jfif" alt="" width="450px">
+                        <p>全球最精緻手製巧克力的創制者歌帝梵巧克力公司(Godiva Chocolatier, Inc. )起源於比利時布魯塞爾，由巧克力巨匠JosephDrap一手開辦，並以傳說中尊貴的Godiva夫人定名，已有超90年曆史。自1968年起，Godiva更成為比利時皇室御用的巧克力品牌，被稱之為最貴氣的巧克力，巧克力裡的勞斯萊斯。</p>
+                        <h3>產地:比利時</h3>
+                        <p>熱量:428卡/100克</p>
+                        <p>$500</p>
+                        <div class="chobtn">加入購物車</div>
+                    </div>
+
+                    <div id="item3">
+                        <h2>Toblerone</h2>
+                        <img src="chocolateImg/toblerone.jpg" alt="" width="450px">
+                        <p>1908年誕生於瑞士，以瑞士牛奶巧克力配以蜂蜜和杏仁造就了其獨特口味。同時，有型的三角形狀配以獨具匠心的包裝讓瑞士三角牌巧克力成為世界上最獨具特色的糖果品牌。比較有名的巧克力是混合了牛奶的黑巧克力。如今的瑞士擁有眾多巧克力知名品牌，其中產自伯爾尼，按照阿爾卑斯山的樣子，將三角形作商標的瑞士三角巧克力，以其新穎的造型，深受眾人喜愛，在眾多品牌中脫穎而出。</p>
+                        <h3>產地:瑞士</h3>
+                        <p>熱量:428卡/100克</p>
+                        <p>$500</p>
+                        <div class="chobtn">加入購物車</div>
+                    </div>
+
+                    <div id="item4">
+                        <h2> VALRHONA</h2>
+                        <img src="chocolateImg/valrhona.jpg" alt="" width="450px">
+                        <p>VALRHONA於1986年首創區分產地可可豆以製成巧克力，借用葡萄酒中的“頂級產地”（Grand Cru）概念，
+                            生產出獨一無二的頂級產地巧克力（Grand Crus Chocolates）。
+                            頂級產地系列巧克力的可可原料採用特定優質可可生產區，
+                            並且精選來自不同莊園具有優良特質的可可豆，
+                            巧妙地調整成最精緻的巧克力製作原料；
+                            每一種頂級產地可可豆所製成的巧克力，
+                            各自擁有不同的風格
+                        </p>
+                        <h3>產地:法國</h3>
+                        <p>熱量:428卡/100克</p>
+                        <p>$500</p>
+                        <div class="chobtn">加入購物車</div>
+                    </div>
+
+                    <div id="item5">
+                        <h2>Venchi</h2>
+                        <img src="chocolateImg/venchi.jpg" alt="" width="450px">
+                        <p>Venchi僅選用來自南美洲與非洲頂級莊園出產的Criollo及Forastero頂級品種、IGP認證的頂級皮埃蒙特榛果（Piedmont hazelnuts )、來自義大利西西里島的頂級開心果及杏仁以及優質利古里亞地區橄欖油。所有產品均無麩質，貼近地中海健康飲食文化，讓美味與健康取得完美平衡。</p>
+
+                        <h3>產地:義大利</h3>
+                        <p>熱量:428卡/100克</p>
+                        <p>$500</p>
+                        <div class="chobtn">加入購物車</div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <!--        ------------------------icecream-------------------------->
+            <div id="content_icecream">
+                <div id="banner">
+                    <div id="item_num">0</div>
+                    <img src="./img/shopping-cart.png" alt="">
+                    <p>冰淇淋</p>
+                </div>
+                <div class="intorduce">
+                    <p>以鮮奶油或奶油等為原料<br>
+                        <br>過敏原提醒:牛奶<br>
+                        <br>熱量: 207卡/100克<br>
+                        <br>口味:香草<br>
+                        <br>價錢:20$/份<br>
+                    </p>
+                    <div id="cart">加入購物車</div>
+                </div>
+                <div class="container_icecream">
+                    <div class="picture">
+                        <div id="box4">
+                            <a href="./img/shop.jpg"><img src="./img/shop.jpg" alt=""></a>
+                            <a href="./img/icecream.jpg"><img src="./img/icecream.jpg" alt=""></a>
+                            <a href="./img/valila.jpg"><img src="./img/valila.jpg" alt=""></a>
+                        </div>
+                        <div id="box3">
+                            <img src="./img/shop.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="cart">
+
+                    </div>
+                </div>
+            </div>
+
+            <!--        ------------------------box-------------------------->
+            <div id="content_box">
+                <select name="cake" id="whichCake">
+                    <option value="">請選擇你需包裝的品項</option>
+                    <option value="cake1">Dog</option>
+                    <option value="cake2">Cat</option>
+                    <option value="cake3">Hamster</option>
+                    <option value="cake4">Parrot</option>
+                    <option value="cake5">Spider</option>
+                    <option value="cake6">Goldfish</option>
+                </select>
+                <div class="main" >
+                   <div id="cakebox">
+                       <h1>box</h1>
+                    <div id="gallery">
+                        <a href="boxImg/1.jpg"><img src="boxImg/1.jpg" width="70" height="70" alt="golf balls"></a>
+                        <a href="boxImg/2.jpg"><img src="boxImg/2.jpg" width="70" height="70" alt="rock wall"></a>
+                        <a href="boxImg/3.jpg"><img src="boxImg/3.jpg" width="70" height="70" alt="old course"></a>
+                        <a href="boxImg/4.jpg"><img src="boxImg/4.jpg" width="70" height="70" alt="tees"></a>
+                        <a href="boxImg/5.jpg"><img src="boxImg/5.jpg" width="70" height="70" alt="tree"></a>
+                        <a href="boxImg/6.jpg"><img src="boxImg/6.jpg" width="70" height="70" alt="ocean course"></a>
+                    </div>
+                    
+                   </div>
+                    
+                    <div id="photo"><img src="boxImg/1.jpg" width="500" height="500" alt=""></div>
+                    
+                </div>
+                <div id="boxbtndiv">
+                    <div id="boxbtn">加入購物車</div>
+                </div>
+                
+            </div>
+
+            <!--        ------------------------cart-------------------------->
+            <div id="content_cart">
+                <div id="select_items">
+                    <h1>購物車</h1>
+                    <br>
+                    <div class="dropdown" id="select_items_dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            商品品項
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">蛋糕</a>
+                            <a class="dropdown-item" href="#">餅乾</a>
+                            <a class="dropdown-item" href="#">鬆餅</a>
+                            <a class="dropdown-item" href="#">冰淇淋</a>
+                            <a class="dropdown-item" href="#">巧克力</a>
+                            <a class="dropdown-item" href="#">派</a>
+                            <a class="dropdown-item" href="#">泡芙</a>
+                        </div>
+                    </div>
+                    <div id="kcal_dialog">
+                        <p>你已經選了</p>
+                        <div id="total">1000</div>
+                        <p>大卡的甜點了！！！</p>
+                    </div>
+                    <img src="img/Charmander.png" alt="">
+                </div>
+                <div id="kcal_cal_form">
+                    <div class="item_cart">
+                        <img src="img/cake1.jpg" alt="">
+                        <div class="item_info">
+                            商品名稱：舒芙蕾<br><br>
+                            熱量：500kcal
+                        </div>
+                        <div class="item_num">
+                            <div class="subtract">-</div>
+                            <div class="num">0</div>
+                            <div class="add">+</div>
+                        </div>
+                    </div>
+                    <div class="item_cart">
+                        <img src="img/cake2.jpg" alt="">
+                        <div class="item_info">
+                            商品名稱：派<br><br>
+                            熱量：500kcal
+                        </div>
+                        <div class="item_num">
+                            <div class="subtract">-</div>
+                            <div class="num">0</div>
+                            <div class="add">+</div>
+                        </div>
+                    </div>
+                    <div class="item_cart">
+                        <img src="img/cake3.jpg" alt="">
+                        <div class="item_info">
+                            商品名稱：法式甜點<br><br>
+                            熱量：500kcal
+                        </div>
+                        <div class="item_num">
+                            <div class="subtract">-</div>
+                            <div class="num">0</div>
+                            <div class="add">+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--        ------------------------all_content end-------------------------->
+
+
+        <!--        ------------------------footer-------------------------->
+        <footer>
+            <div id="footer">
+                <div id="footer_left">
+                    <p>
+                        電話：0000000000<br>
+                        地址：xxxxxxxxxx<br>
+                        營運時間：9:00~21:00
+                    </p>
+                </div>
+                <div id="footer_right">
+                    <p>
+                        Line：DESATOO<br>
+                        Facebook：DESATOO<br>
+                        Instagram：DESATOO
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!--        ------------------------container end-------------------------->
+</body>
+
+</html>
