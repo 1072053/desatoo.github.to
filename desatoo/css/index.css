@@ -14,7 +14,6 @@ html, body {
     padding-bottom: 100px;
     flex: 1;
 }
-
 /*------------------header------------------------*/
 header {
     margin: 0;
@@ -81,13 +80,11 @@ footer {
     color: whitesmoke;
 }
 #footer_left {
-    width: 200px;
+    width: 300px;
 }
 #footer_right {
-    width: 200px;
+    width: 300px;
 }
-
-
 #all_content {
     
 }
@@ -108,212 +105,93 @@ footer {
 }
 
 /*------------------items------------------------*/
-#banner {
-    width: 100%;
-    height: 40px;
-    border-bottom: 1px solid black;
+#content_items {
+    margin: 30px 15%;
+    height: 500px;
 }
-
 #container_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.dessert_item {
+    height: 100%;
+    margin: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: center;
+}
+.dessert_item img {
+    width: 200px;
+/*    height:200px;*/
+    margin: 10px;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.15);
+}
+.dessert_text {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+/*------------------cake------------------------*/
+#content_cake {
+    margin: 30px 15%;
+     height: 800px;
+}    
+ #cake_container {
     width: 100%;
-    height: 600px;
-    /*border: 1px solid black;*/
     margin-top: 10px;
+     display: flex;
+     flex-wrap: wrap;
 }
-
-#banner img {
-    float: right;
-    width: 40px;
-    margin-right: 0px;
+.introduce {
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    /*    overflow: auto;*/
+    /*    width: 30%;*/
+    border-radius: 5px;
 }
-
-.dessert_img {
-    width: 150px;
-    height:200px;
+.introduce:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+.introduce img {
+    width: 300px;
     margin: 3px;
     box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.15);
 }
-
-.dessert_text {
+.cake_name {
     width: 200px;
     font-size: 20px;
     padding: 5px;
     text-align: justify;
-    float: right;
 }
-
-.dessert_price {
-    font-size: 20px;
-    padding: 5px;
-    width: 100px;
-    float: right;
-    margin-left: 20px;
-}
-
-.dessert_item {
-    margin: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    overflow: auto;
-    width: 450px;
-    padding: 8px;
-    border-radius: 5px;
-    float: left;
-}
-.dessert_cart {
-    width: 30px;
-    float: left;
-    cursor:pointer;
-    border: 1px solid transparent;
-    float: right;
-}
-.dessert_cart:hover {
-    border: 1px solid rgba(255,0,0,0.5);
-    border-radius: 4px;
-}
-
-#cart_win {
-    position: absolute;
-    top: 150px;
-    left: 280px;
-    border: 1px solid white;
-    padding: 10px;
-    background-color: blanchedalmond;
-    display: none;
-    border-radius: 8px;
-    box-shadow: 10px 10px 20px rgb(0, 0, 0,0.5);
-    width: 360px;
-    padding-top: 30px;            
-}
-#close {
-    position: absolute;
+.close {
+    /*position: absolute;
     top: 0px;
-    left: 354px;
-    /* width: 360px; */
+    left: 354px;*/
+    width: 20px;
     padding: 2px;
     border: 1px solid gray;
     margin: 4px;
     border-radius: 4px;
     cursor: pointer;
-}
-.cart_item {
-    width: 360px;
-    overflow: auto;
-    margin: 3px;
-    margin-bottom: 8px;
-    border-bottom: 1px solid gray;
-    padding-bottom: 4px;
-}
-
-.cart_img {
-    width: 60px;
-    float: left;
-    margin-right: 10px;
-}
-
-.cart_text {
-    float: left;
-    width: 280px;
-    letter-spacing: 2px;
-    margin-top: 4px;
-}
-
-.cart_price {
-    width: 100px;
-    float: left;
-    letter-spacing: 2px;
-}
-
-.cart_delete {
-    float: left;
-    border:1px solid transparent;
-    cursor: pointer;
-}
-.cart_delete:hover {
-    border: 1px solid rgba(255,0,0,0.5);
-    border-radius: 4px;
-}
-#content_items p {
-   font-size: 20px;
-   text-align: center;
-}
-#content_items #item_num {
     float: right;
-    font-size: 18px;
-    border-radius: 50%;
-    background-color: rgba(255, 0, 0, 0.8);
-    padding: 8px;
-    line-height: 20px;
-    color: white;
 }
-
-/*------------------cake and icecream------------------------*/
-#content_cake,  #content_icecream{
-    margin: 0 15% 0 15%;
+.it {
+    position: absolute;
+    top: 190px;
+    left: 550px;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    width: 400px;
+    display: none;
+    box-shadow: 8px 8px 8px rgba(0 0 0/50%);
+    background-color: rgba(255,255,255,0.93);
 }
-.container_cake, .container_icecream{
-  width: 60%;
-  display: flex inline-flex;
-}
-.picture{
-  display: block;
-}
-.intorduce{
-  width: 40%;
-  float: right;
-}
-#banner{
-    width: 100%;
-    height: 40px;
-    border-bottom: 1px solid black;
-}
-#box1,#box3{
-  width: 70%;
-  display: inline-flex;
-  justify-content: space-around;
-}
-#box2,#box4{
-  width: 70%;
-  display: inline-flex;
-  justify-content: space-around;
-}
-#content_cake a{
- width: 20%;
-}
-#content_icecream a{
- width: 20%;
-}
-#content_cake img{
+.it img {
   width:100%;
-}
-#content_icecream img{
-  width:100%;
-}
-#banner img
-{
- height: 30px;
-  width: auto;
-  float: right;
-}
-#banner p{
-  text-align: center;
-  font-size: 20px;
-}
-#banner #item_num {
-    float: right;
-    font-size: 18px;
-    border-radius: 50%;
-    background-color: rgba(253, 122, 0, 0.8);
-    padding: 8px;
-    line-height: 20px;
-    color: white;
-}
-#cart{
-    border: 1px solid black;
-    padding: 4px;
-    border-radius: 4px;
-    float: left;
-    margin: 4px;
-    cursor: pointer; 
+    padding-right: 15px;
 }
 
 /*------------------chocolate------------------------*/
@@ -321,6 +199,7 @@ footer {
     margin: 30px 15% 30px 15%;
     text-align: center;
 }
+
 .position {
     width: 5%;
     height: 5%;
@@ -336,7 +215,6 @@ footer {
     position: absolute;
 
 }
-
 
 #p1 {
     top: 370px;
@@ -402,12 +280,7 @@ footer {
 
 }
 
-.item p,
-h3,
-h2,
-input,
-chobtn,
-img {
+.item p,h3,h2,input,chobtn,img {
     margin: 10px;
 }
 
@@ -441,22 +314,63 @@ img {
     float: right;
 }
 
+/*------------------icecream------------------------*/
+#content_icecream {
+    margin: 30px 15%;
+}
+.picture {
+    width: 50%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#box2 {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+#box2 a {
+    width: 30%;
+    margin: 10px;
+}
+#box2 a img {
+    width: 100%;
+}
+#box1 {
+  width: 80%;
+}
+#box1 img {
+    width: 100%;
+}
+#intorduce_icecream {
+    width: 50%;
+    float: right;
+}
+#intorduce-chocolate {
+    display: block;
+}
+#intorduce-strawberry,#intorduce-vailia{
+    display: none;
+}
+
 /*------------------box------------------------*/
 #content_box {
     margin: 30px 15% 30px 15%;
 }
-
 #gallery img {
-    //margin: 8px;
+/*    margin: 8px;*/
 }
 
 #photo {
-    //margin-left: 150px;
-    //position: relative;
-    //margin-top: 10px;
-    text-align:center;
+    margin: 0 15%;
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+    width: 60%;
+    height: 500px;
+    overflow: hidden;
 }
-
 #photo img {
     position: relative;
     bottom: 0;
@@ -475,6 +389,7 @@ img {
     flex-direction: row;
     text-align:center;
 }
+
 #boxbtn {
     float:right;
     width: 100px; 
@@ -487,79 +402,194 @@ img {
     text-align: center;
 }
 
-/*------------------cart------------------------*/
+/*
+.flex-column {
+    flex-direction: column!important;
+    width: 200px;
+    text-align:center;
+    border:1px solid chocolate;
+    padding: 10px;
+}
+*/
 
+#whichcake div{
+    cursor: pointer;
+    text-align:center;
+}
+
+#whichcake{
+       text-align:center;
+    background-color: blanchedalmond;
+}
+
+
+/*------------------cart------------------------*/
 #content_cart {
-    margin-left: 10%;    
+    margin: 30px 15%;
+    display: flex;
+    flex-direction: column;
+}
+#cart_article {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 /*select_items*/
 #select_items {
-    width: 45%;
+    width: 30%;
     margin-top: 30px;
-}
-#select_items_dropdown .btn{
-    background-color: white;
-    color: black;
 }
 #select_items img {
     width: 300px;
     margin-top: 50px;
-}
-#kcal_dialog {
-    border: 3px solid orange;
-    margin: 10px 100px 0 0;
-    padding: 10px;
-    width: 300px;
+    position: relative;
     float: right;
+    right: 100px;
+}
+.speech-bubble {
+    width: 280px;
+	position: relative;
+    top: top-500px;
+    float: right;
+    margin-right: 30px;
+    padding: 20px 0 5px 15px;
+	background: #ffbf8f;
+	border-radius: .4em;
     display: flex;
+    flex-direction: row;
+}
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 41px solid transparent;
+	border-top-color: #ffbf8f;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -20.5px;
+	margin-bottom: -41px;
 }
 #total {
+    
 }
 
 /*kcal_cal_form*/
 #kcal_cal_form {
     border: 3px solid saddlebrown;
-    margin: 30px 0 30px 0;
+    margin: 30px;
+    width: 70%
+    
 }
 .item_cart {
-    margin: 30px;
+    width: 100%;
+    margin: 0 15px;
     display: flex;
     flex-direction: row;
 }
 .item_cart img {
     height: 150px;
+    width: 25%;
 }
 .item_info {
-    margin-left: 30px;
+/*    margin-left: 30px;*/
     padding-top: 30px;
+    width: 25%;
 }
 .item_num {
     display: flex;
     flex-direction: row;
-    margin-left: 30px;
-    padding-top: 30px;
+    padding: 30px;
+    width: 15%;
 }
 .subtract {
     border: 1px solid black;
+    border-right: none;
     width: 30px;
     height: 30px;
-    padding: 0px 10px 5px 10px;
+    padding: 3px 10px 5px 10px;
     margin-top: 30px;
+    cursor: pointer;
 }
 .num {
     border: 1px solid black;
+    border-right: none;
     width: 30px;
     height: 30px;
-    padding: 0px 10px 5px 10px;
+    padding: 3px 10px 5px 10px;
     margin-top: 30px;
 }
 .add {
     border: 1px solid black;
     width: 30px;
     height: 30px;
-    padding: 0px 10px 5px 10px;
+    padding: 2px 10px 5px 8px;
     margin-top: 30px;
+    cursor: pointer;
 }
 
+.cart_delete {
+    float: right;
+    margin: 60px 0 0 70px;
+    height: 30px;
+    padding: 2px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+}
+#kcal_cal_form img{
+    width: 200px;
+}
+#kcal_cal_form p{
+    width: 150px;
+}
+
+
+
+#send{
+    position: absolute;
+    bottom: 115px;
+    right: 300px;
+    border:  2px solid black;
+    border-radius: 4px;
+    padding: 4px;
+    background-color:floralwhite;
+    margin-left: 180px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#info{
+    position: absolute;
+    bottom: 250px;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 35px;
+    width: 530px;
+    height: 350px;
+    display: none;
+    box-shadow: 8px 8px 8px rgba(0 0 0/50%);
+    background-color: rgba(255,255,255,0.9);   
+}
+#yes{
+    float: left;
+    border:  2px solid black;
+    border-radius: 4px;
+    padding: 4px;
+    background-color: rgba(0,0,0,0.2);
+    margin-left: 180px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 270px;
+    top: 280px;
+}
+.closeinfo {
+    float: right;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 0 5px;
+}

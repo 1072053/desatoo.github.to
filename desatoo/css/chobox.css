@@ -118,7 +118,7 @@ img {
 */
 
 
-.chobtn {
+.cartbtn {
     /*position: absolute;
     top: 650px;
     left: 650px;*/
@@ -143,3 +143,42 @@ img {
     cursor: pointer;
     float: right;
 }
+/*---------*/
+.okbtn {
+    /*position: absolute;
+    top: 650px;
+    left: 650px;*/
+    width: 130px;
+    margin: 10px;
+    padding: 2px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    color: antiquewhite;
+    background-color: chocolate;
+    display: none;
+}
+#boxaddtext{
+    width: 200px;
+    height: 100px;
+    float: right;
+    background-color: bisque;
+    color: chocolate;
+    display: none;
+    align-content: center;
+    padding-top: 30px;
+    margin: 10px;
+}
+
+#boxbtn {
+    float:right;
+    width: 100px; 
+    padding: 2px;
+    border: 1px solid gray;
+    margin-top: 35px;
+    margin-bottom: 70px;
+    border-radius: 2px;
+    background-color:floralwhite;
+    cursor: pointer;
+    text-align: center;
+}
+
