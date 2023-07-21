@@ -1,0 +1,184 @@
+#content_chocolate {
+    margin: 30px 15% 30px 15%;
+    text-align: center;
+}
+
+.position {
+    width: 35px;
+    height: 38px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#mapPosition {
+    position: absolute;
+    left: 150px;
+    top: 230px;
+}
+
+#nothing {
+    height: 800px;
+}
+
+#chocolateIntroduction {
+    background-color: white;
+    height: 700px;
+    width: 500px;
+    position: absolute;
+    top: 240px;
+    left: 950px;
+}
+
+#chocolateIntroduction input {
+    width: 50px;
+}
+
+p {
+    margin: 20px;
+}
+
+#p1 {
+    top: 569px;
+    left: 328px;
+}
+
+#p2 {
+    top: 613px;
+    left: 410px;
+}
+
+#p3 {
+    top: 682px;
+    left: 459px;
+}
+
+#p4 {
+    top: 652px;
+    left: 379px;
+}
+
+#p5 {
+    top: 695px;
+    left: 491px;
+}
+
+#item1 {
+    display: none;
+}
+
+#item2 {
+
+    display: none;
+}
+
+#item3 {
+    display: none;
+
+}
+
+#item4 {
+
+    display: none;
+
+}
+
+#item5 {
+
+    display: none;
+
+}
+
+/*
+.item {
+    width: 600px;
+    height: 400px;
+    border: 1px solid gray;
+    background-color: aliceblue;
+    position: absolute;
+
+}
+
+.item img {
+    width: 300px;
+
+}
+
+.item p,
+h3,
+h2,
+input,
+chobtn,
+img {
+    margin: 10px;
+}
+
+.item input {
+    width: 50px;
+}
+*/
+
+
+.cartbtn {
+    /*position: absolute;
+    top: 650px;
+    left: 650px;*/
+    width: 100px;
+    margin: 10px;
+    padding: 2px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    background-color: floralwhite;
+    cursor: pointer;
+}
+
+.close {
+    /*position: absolute;
+    top: 0px;
+    left: 354px;*/
+    width: 20px;
+    padding: 2px;
+    border: 1px solid gray;
+    margin: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+/*---------*/
+.okbtn {
+    /*position: absolute;
+    top: 650px;
+    left: 650px;*/
+    width: 130px;
+    margin: 10px;
+    padding: 2px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    color: antiquewhite;
+    background-color: chocolate;
+    display: none;
+}
+#boxaddtext{
+    width: 200px;
+    height: 100px;
+    float: right;
+    background-color: bisque;
+    color: chocolate;
+    display: none;
+    align-content: center;
+    padding-top: 30px;
+    margin: 10px;
+}
+
+#boxbtn {
+    float:right;
+    width: 100px; 
+    padding: 2px;
+    border: 1px solid gray;
+    margin-top: 35px;
+    margin-bottom: 70px;
+    border-radius: 2px;
+    background-color:floralwhite;
+    cursor: pointer;
+    text-align: center;
+}
+
